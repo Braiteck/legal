@@ -1,0 +1,82 @@
+.swiper-button-next,
+.swiper-button-prev
+{
+    display: none;
+}
+
+
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction
+{
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 9px;
+
+    pointer-events: none;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.swiper-pagination-bullet
+{
+    color: #fff;
+
+    position: relative;
+
+    display: block;
+
+    width: 9px;
+    height: 9px;
+
+    pointer-events: auto;
+
+    opacity: 1;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.swiper-pagination-bullet:before
+{
+    position: absolute;
+    top: -4px;
+    left: -4px;
+
+    display: block;
+
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+
+    content: '';
+    transition: opacity .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+    border: 1px solid;
+    border-radius: inherit;
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet
+{
+    margin-left: 19px !important;
+}
+
+.swiper-pagination-bullet:hover:before,
+.swiper-pagination-bullet.active:before
+{
+    opacity: 1;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
