@@ -11,7 +11,7 @@ $(() => {
 			watchSlidesVisibility: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			spaceBetween: 24,
+			spaceBetween: 0,
 			slidesPerView: 1,
 			pagination: {
 				el: '.swiper-pagination',
@@ -38,10 +38,10 @@ $(() => {
 
 
 	// Моб. меню
-	$('.mob_header .mob_menu_btn').click((e) => {
+	$('header .mob_menu_btn').click((e) => {
 		e.preventDefault()
 
-		$('.mob_header .mob_menu_btn').toggleClass('active')
+		$('header .mob_menu_btn').toggleClass('active')
 		$('body').toggleClass('menu_open')
 		$('header .menu').toggleClass('show')
 	})

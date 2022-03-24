@@ -3,15 +3,33 @@
     /*-------------------
         Global styles
     -------------------*/
-
-
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    .content_flex .content
     {
-        padding: 24px;
+        width: 100%;
+
+        order: 2;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding: 15px 18px 16px;
+    }
+
+    .accordion_item .head .title
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding: 0 18px 26px;
     }
 
 
@@ -19,63 +37,107 @@
     /*------------
         Header
     ------------*/
-    header
+    header .menu
     {
-        position: fixed;
-        z-index: 101;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        margin: 0;
+        padding: 32px 24px;
+
+        transition: transform .2s linear;
+        transform: translateX(-100%);
+
+        border-top: 1px solid #ebebeb;
+        background: #fff;
+        box-shadow: 0 4px 13px rgba(30, 35, 66, .11);
+    }
+
+    header .menu.show
+    {
+        transform: translateX(0%);
+    }
+
+    header .menu .item + .item
+    {
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+    header .menu .item > a
+    {
+        font-size: 22px;
+        line-height: 47px;
+
+        display: block;
+
+        padding: 0;
+
+        text-align: center;
+    }
+
+    header .menu .item > a:after
+    {
+        display: none;
+    }
+
+
+    header .menu .sub_menu
+    {
+        position: relative;
         top: 0;
         left: 0;
 
-        width: 310px;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
+        display: none;
+        visibility: visible;
 
-        transition: transform .3s linear;
-        transform: translateX(-100%);
-
-        background: #fff;
-    }
-
-    header.show
-    {
-        transform: translateX(0);
-    }
-
-
-    header .mob_scroll
-    {
-        display: flex;
-        overflow: auto;
-
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
+        width: 100%;
+        min-width: 0;
         padding: 0;
 
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-wrap: wrap;
-        overscroll-behavior-y: contain;
+        opacity: 1;
+        background: none;
+        box-shadow: none;
     }
 
-    header .mob_scroll > *
+
+    header .menu .item.show
     {
-        width: 100%;
+        display: block !important;
+
+        margin: 0;
     }
 
+    header .menu .item.show > a
+    {
+        display: none;
+    }
 
-
-    /*-----------------
-        Mob. header
-    -----------------*/
-    .mob_header
+    header .menu .item.show .sub_menu
     {
         display: block;
+    }
+
+    header .menu .item.show .sub_menu .mob_title
+    {
+        display: flex;
+    }
+
+
+    header .menu .sub_menu a
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    header .mob_menu_btn
+    {
+        display: flex;
     }
 
 
@@ -83,6 +145,11 @@
     /*-------------
         Sidebar
     -------------*/
+    aside
+    {
+        width: 100%;
+        margin-bottom: 40px;
+    }
 
 
 
@@ -107,18 +174,135 @@
     /*----------------
         Typography
     ----------------*/
+    .text_block table th:first-child,
+    .text_block table td:first-child
+    {
+        padding-left: 24px;
+    }
+
+    .text_block table th:last-child,
+    .text_block table td:last-child
+    {
+        padding-right: 24px;
+    }
 
 
 
     /*-----------------
         Main slider
     -----------------*/
+    .stats .item
+    {
+        display: block;
+
+        text-align: center;
+    }
+
+    .stats .item .icon
+    {
+        margin: 0 auto 12px;
+    }
+
+
+
+    /*----------------
+        Bookmakers
+    ----------------*/
+    .bookmakers .item.exclusive:before
+    {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+
+    .bookmakers .item .col_number
+    {
+        display: none;
+    }
+
+    .bookmakers .col_logo
+    {
+        margin-left: 0 !important;
+    }
+
+    .bookmakers .col_info
+    {
+        width: 100px;
+        min-width: 100px;
+    }
+
+    .bookmakers .item .rating > * + *
+    {
+        margin-left: 2px;
+    }
+
+    .bookmakers .item .col_btns a
+    {
+        padding: 6px 20px 9px;
+    }
+
+
+    .bookmakers .col_btns
+    {
+        width: 184px;
+        min-width: 184px;
+    }
+
+
+
+    /*--------------------
+        Bookmaker info
+    --------------------*/
+    .bookmaker_info .col_center
+    {
+        width: calc(100% - 230px);
+    }
+
+
+    .bookmaker_info .desc
+    {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0;
+
+        border: none;
+    }
+
+
+    .bookmaker_info .btns .btn
+    {
+        padding: 9px 20px 13px;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer
+    {
+        padding: 56px 0 48px;
+    }
+
+
+    footer .col_left
+    {
+        width: 192px;
+    }
+
+
+    footer .logo,
+    footer .logo img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+
+    footer .socials a + a
+    {
+        margin-left: 10px;
+    }
 
 
 

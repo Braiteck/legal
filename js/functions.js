@@ -48,30 +48,50 @@ $(() => {
 
 
 	if (is_touch_device()) {
-		// Подменю на тач скрине
-		$('header .menu .item > a.sub_link').addClass('touch_link')
+		if ($(window).width() > 1023) {
+			// Подменю на тач скрине
+			$('header .menu .item > a.sub_link').addClass('touch_link')
 
-		$('header .menu .item > a.sub_link').click(function (e) {
-			const $dropdown = $(this).next()
+			$('header .menu .item > a.sub_link').click(function (e) {
+				const $dropdown = $(this).next()
 
-			if ($dropdown.css('visibility') === 'hidden') {
+				if ($dropdown.css('visibility') === 'hidden') {
+					e.preventDefault()
+
+					$('header .menu .sub_menu').removeClass('show')
+					$dropdown.addClass('show')
+
+					$('body').css('cursor', 'pointer')
+				}
+			})
+
+			// Закрываем под. меню при клике за её пределами
+			$(document).click((e) => {
+				if ($(e.target).closest('.menu').length === 0) {
+					$('header .menu .sub_menu').removeClass('show')
+
+					$('body').css('cursor', 'default')
+				}
+			})
+		} else {
+			$('header .menu .item > a.sub_link').click(function (e) {
 				e.preventDefault()
 
-				$('header .menu .sub_menu').removeClass('show')
-				$dropdown.addClass('show')
+				let parent = $(this).closest('.item')
 
-				$('body').css('cursor', 'pointer')
-			}
-		})
+				$('header .menu .item').hide()
+				parent.addClass('show')
+			})
 
-		// Закрываем под. меню при клике за её пределами
-		$(document).click((e) => {
-			if ($(e.target).closest('.menu').length === 0) {
-				$('header .menu .sub_menu').removeClass('show')
+			$('header .menu .sub_menu .back_btn').click(function (e) {
+				e.preventDefault()
 
-				$('body').css('cursor', 'default')
-			}
-		})
+				let parent = $(this).closest('.item')
+
+				$('header .menu .item').show()
+				parent.removeClass('show')
+			})
+		}
 
 
 		// Закрытие моб. меню свайпом справо на лево
@@ -84,10 +104,9 @@ $(() => {
 
 			if ($('body').hasClass('menu_open') && ts > te + 50) {
 				// Свайп справо на лево
-				$('.mob_header .mob_menu_btn').removeClass('active')
-				$('body').removeClass('menu_open')
-				$('header').removeClass('show')
-				$('.overlay').fadeOut(300)
+				$('header .mob_menu_btn').toggleClass('active')
+				$('body').toggleClass('menu_open')
+				$('header .menu').toggleClass('show')
 			} else if (ts < te - 50) {
 				// Свайп слева на право
 			}

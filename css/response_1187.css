@@ -3,6 +3,14 @@
     /*-------------------
         Global styles
     -------------------*/
+    :root
+    {
+        --sidebar_width: 280px;
+        --font_size: 15px;
+        --font_size_title: 30px;
+    }
+
+
     html.custom_scroll ::-webkit-scrollbar
     {
         width: 5px;
@@ -10,13 +18,31 @@
     }
 
 
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction
     {
-        padding: 32px;
+        bottom: 24px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head > .icon
+    {
+        margin-right: 16px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 22px;
+        line-height: 28px;
+
+        position: relative;
+        top: -2px;
     }
 
 
@@ -24,6 +50,22 @@
     /*------------
         Header
     ------------*/
+    header
+    {
+        margin-bottom: 24px;
+        padding: 24px 0;
+    }
+
+
+    header .menu .item + .item
+    {
+        margin-left: 24px;
+    }
+
+    header .menu .item > a
+    {
+        padding: 7px 0;
+    }
 
 
 
@@ -48,24 +90,270 @@
     /*------------------
         Form elements
     ------------------*/
+    .form .input
+    {
+        padding-right: 19px;
+        padding-left: 19px;
+    }
+
+    .form textarea
+    {
+        padding: 11px 19px 15px;
+    }
+
+
+    .form .submit_btn
+    {
+        line-height: 21px;
+
+        padding: 12px 20px 16px;
+    }
 
 
 
     /*----------------
         Typography
     ----------------*/
+    .text_block
+    {
+        line-height: 23px;
+    }
+
+
+    .text_block table th,
+    .text_block table td
+    {
+        line-height: 21px;
+
+        padding: 12px 16px;
+    }
 
 
 
     /*-----------------
         Main slider
     -----------------*/
+    .main_slider .info
+    {
+        min-height: 424px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 44px;
+        line-height: 56px;
+    }
+
+
+    .main_slider .desc
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+    .main_slider .link
+    {
+        margin-top: 32px;
+    }
+
+    .main_slider .link a
+    {
+        line-height: 21px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats .data
+    {
+        padding: 20px 40px;
+    }
+
+
+    .stats .item
+    {
+        line-height: 19px;
+    }
+
+    .stats .item .val
+    {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    .stats .item .name br
+    {
+        display: block;
+    }
+
+
+
+    /*----------------
+        Bookmakers
+    ----------------*/
+    .bookmakers .item
+    {
+        padding: 16px 16px 16px 30px;
+    }
+
+    .bookmakers .item > * + *
+    {
+        margin-left: 16px;
+    }
+
+
+    .bookmakers .item .code
+    {
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+
+    .bookmakers .item .col_btns a
+    {
+        font-size: var(--font_size);
+        line-height: 21px;
+
+        padding: 8px 24px 11px;
+    }
+
+
+
+    .bookmakers .col_info
+    {
+        width: 160px;
+        min-width: 160px;
+    }
+
+    .bookmakers .col_btns
+    {
+        width: 204px;
+        min-width: 204px;
+    }
+
+
+
+    /*--------------------
+        Bookmaker info
+    --------------------*/
+    .bookmaker_info .data
+    {
+        padding: 24px;
+    }
+
+
+    .bookmaker_info .rating .icon
+    {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    .bookmaker_info .comments_count .icon
+    {
+        position: relative;
+        top: 2px;
+
+        width: 24px;
+        height: 24px;
+    }
+
+    .bookmaker_info .rating .val,
+    .bookmaker_info .comments_count .val
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .bookmaker_info .desc
+    {
+        line-height: 23px;
+
+        width: calc(100% - 576px);
+        margin-left: 0;
+        padding-left: 23px;
+    }
+
+
+    .bookmaker_info .bottom
+    {
+        margin-top: 24px;
+        padding: 20px 24px;
+    }
+
+
+    .bookmaker_info .gift .icon
+    {
+        margin-right: 20px;
+    }
+
+    .bookmaker_info .gift .code
+    {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+
+    .bookmaker_info .btns .btn
+    {
+        line-height: 21px;
+
+        margin-left: 12px;
+        padding: 10px 26px 14px;
+    }
+
+
+
+    /*--------------
+        Comments
+    --------------*/
+    .comments .list > * + *
+    {
+        margin-top: 20px;
+    }
+
+
+    .comments .add_comment
+    {
+        margin-bottom: 48px;
+    }
+
+
+    .comments .comment .text
+    {
+        margin-top: 16px;
+    }
+
+
+    .comments .comment .reply_btn
+    {
+        line-height: 21px;
+
+        margin-top: 16px;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer
+    {
+        padding: 60px 0 52px;
+    }
+
+
+    footer .links .columns
+    {
+        margin-right: -52px;
+
+        column-gap: 32px;
+    }
 
 
 

@@ -3,15 +3,10 @@
     /*-------------------
         Global styles
     -------------------*/
-
-
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    :root
     {
-        padding: 20px;
+        --font_size: 14px;
+        --font_size_title: 28px;
     }
 
 
@@ -19,6 +14,21 @@
     /*------------
         Header
     ------------*/
+    header
+    {
+        padding: 16px 0;
+    }
+
+
+    header .logo img
+    {
+        display: none;
+    }
+
+    header .logo img.mob
+    {
+        display: block;
+    }
 
 
 
@@ -43,24 +53,360 @@
     /*------------------
         Form elements
     ------------------*/
+    .form .captcha
+    {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+
+    .form .submit
+    {
+        width: 100%;
+    }
+
+    .form .submit_btn
+    {
+        width: 100%;
+    }
 
 
 
     /*----------------
         Typography
     ----------------*/
+    .text_block table
+    {
+        width: 720px;
+    }
 
 
 
     /*-----------------
         Main slider
     -----------------*/
+    .main_slider .info
+    {
+        min-height: 340px;
+        padding: 40px 24px 60px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+
+    .main_slider .desc
+    {
+        padding: 0 24px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats .data
+    {
+        padding: 24px 40px;
+    }
+
+
+    .stats .item
+    {
+        display: flex;
+
+        text-align-last: left;
+    }
+
+    .stats .item + .item
+    {
+        margin-top: 16px;
+    }
+
+    .stats .item .icon
+    {
+        margin: 0 16px 0 0;
+    }
+
+    .stats .item .name br
+    {
+        display: none;
+    }
+
+
+
+    /*----------------
+        Bookmakers
+    ----------------*/
+    .bookmakers .list > * + *
+    {
+        margin-top: 12px;
+    }
+
+
+    .bookmakers .item
+    {
+        padding-right: 20px;
+        padding-left: 32px;
+    }
+
+    .bookmakers .item > * + *
+    {
+        margin-left: 20px;
+    }
+
+
+    .bookmakers .item .col_logo
+    {
+        margin-bottom: 14px;
+    }
+
+    .bookmakers .item .col_logo img
+    {
+        max-height: 40px;
+
+        border-radius: 5px;
+    }
+
+
+    .bookmakers .item .col_info
+    {
+        position: absolute;
+        bottom: 11px;
+        left: 32px;
+
+        margin: 0 !important;
+    }
+
+
+    .bookmakers .item .name
+    {
+        display: none;
+    }
+
+
+    .bookmakers .item .rating
+    {
+        margin: 0;
+
+        justify-content: center;
+    }
+
+    .bookmakers .item .rating .icon
+    {
+        width: 12px;
+        height: 12px;
+    }
+
+
+    .bookmakers .item .col_gift
+    {
+        display: block;
+    }
+
+    .bookmakers .item .col_gift .icon
+    {
+        display: none;
+    }
+
+    .bookmakers .item .col_gift .icon + *
+    {
+        width: 100%;
+    }
+
+
+    .bookmakers .item .col_btns > *
+    {
+        display: none;
+    }
+
+    .bookmakers .item .col_btns > *:last-child
+    {
+        display: block;
+    }
+
+    .bookmakers .item .col_btns a
+    {
+        padding: 6px 18px 9px;
+    }
+
+
+
+    .bookmakers .col_logo,
+    .bookmakers .col_info
+    {
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .bookmakers .col_btns
+    {
+        width: 87px;
+        min-width: 87px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row
+    {
+        margin-bottom: -28px;
+        margin-left: -16px;
+    }
+
+    .articles .row > *,
+    .content .articles .row > *
+    {
+        width: calc(50% - 16px);
+        margin-bottom: 28px;
+        margin-left: 16px;
+    }
+
+
+    .articles .article .name
+    {
+        line-height: 21px;
+    }
+
+
+
+    /*--------------------
+        Bookmaker info
+    --------------------*/
+    .bookmaker_info .col_left
+    {
+        width: 100%;
+    }
+
+
+    .bookmaker_info .col_center
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    .bookmaker_info .logo img
+    {
+        max-height: none;
+    }
+
+
+    .bookmaker_info .gift
+    {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .bookmaker_info .gift .icon + *
+    {
+        width: auto;
+    }
+
+
+    .bookmaker_info .btns
+    {
+        width: 100%;
+        margin-top: 32px;
+
+        justify-content: center;
+    }
+
+    .bookmaker_info .btns .btn
+    {
+        margin: 0;
+    }
+
+
+
+    /*--------------
+        Comments
+    --------------*/
+    .comments .comment .data
+    {
+        padding: 16px 20px;
+    }
+
+    .comments .comment .text
+    {
+        line-height: 21px;
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer
+    {
+        padding-bottom: 148px;
+    }
+
+
+    footer .col_left
+    {
+        width: 100%;
+    }
+
+
+    footer .col_right
+    {
+        width: 100%;
+        margin-top: 32px;
+    }
+
+
+    footer .logo,
+    footer .logo img
+    {
+        width: auto;
+        height: 40px;
+        margin: 0;
+    }
+
+
+    footer .text
+    {
+        position: absolute;
+        bottom: 32px;
+        left: 0;
+
+        width: 100%;
+        padding: 0 24px;
+
+        text-align: center;
+    }
+
+
+    footer .links
+    {
+        width: 100%;
+        margin-top: 32px;
+    }
+
+
+    footer .socials
+    {
+        text-align: center;
+    }
+
+    footer .socials .items
+    {
+        justify-content: center;
+    }
+
+
+    footer .sitemap_link
+    {
+        text-align: center;
+    }
 
 
 

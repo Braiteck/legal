@@ -3,15 +3,9 @@
     /*-------------------
         Global styles
     -------------------*/
-
-
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    .cont
     {
-        padding: 16px;
+        padding: 0 20px;
     }
 
 
@@ -19,6 +13,11 @@
     /*------------
         Header
     ------------*/
+    header
+    {
+        margin-bottom: 20px;
+        padding: 12px 0;
+    }
 
 
 
@@ -43,6 +42,17 @@
     /*------------------
         Form elements
     ------------------*/
+    .form .captcha img
+    {
+        max-width: 120px;
+        max-height: 46px;
+        margin-right: 16px;
+    }
+
+    .form .captcha .input
+    {
+        width: 139px;
+    }
 
 
 
@@ -55,12 +65,229 @@
     /*-----------------
         Main slider
     -----------------*/
+    .main_slider
+    {
+        margin: -20px -20px 20px;
+    }
+
+
+    .main_slider .swiper-container,
+    .main_slider .slide
+    {
+        border-radius: 0;
+    }
+
+
+    .main_slider .info
+    {
+        min-height: 480px;
+        padding: 40px 20px 60px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 32px;
+        line-height: 46px;
+    }
+
+
+    .main_slider .desc
+    {
+        font-size: 17px;
+        line-height: 25px;
+
+        margin-top: 9px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats .item
+    {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .stats .item .icon
+    {
+        margin-right: 18px;
+    }
+
+    .stats .item .val
+    {
+        font-size: 30px;
+        line-height: 43px;
+    }
+
+    .stats .item .name br
+    {
+        display: block;
+    }
+
+
+
+    /*----------------
+        Bookmakers
+    ----------------*/
+    .bookmakers .item
+    {
+        padding: 10px 10px 10px 24px;
+    }
+
+    .bookmakers .item > * + *
+    {
+        margin-left: 16px;
+    }
+
+
+    .bookmakers .item .col_logo
+    {
+        margin-bottom: 18px;
+    }
+
+
+    .bookmakers .item .col_info
+    {
+        left: 24px;
+    }
+
+
+    .bookmakers .item .rating .icon
+    {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    .bookmakers .item .code
+    {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+
+    .bookmakers .item .cashback
+    {
+        font-size: 11px;
+        line-height: 16px;
+
+        margin-top: 0;
+    }
+
+
+    .bookmakers .item .col_btns a
+    {
+        padding: 6px 16px 9px;
+    }
+
+
+    .bookmakers .item.exclusive:before
+    {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+
+    .bookmakers .col_logo,
+    .bookmakers .col_info
+    {
+        width: 68px;
+        min-width: 68px;
+    }
+
+    .bookmakers .col_btns
+    {
+        width: 82px;
+        min-width: 82px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row
+    {
+        margin-bottom: -36px;
+        margin-left: 0;
+    }
+
+    .articles .row > *,
+    .content .articles .row > *
+    {
+        width: 100%;
+        margin-bottom: 36px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------------
+        Bookmaker info
+    --------------------*/
+    .bookmaker_info .data
+    {
+        padding: 20px;
+    }
+
+
+    .bookmaker_info .btns
+    {
+        display: block;
+    }
+
+    .bookmaker_info .btns .btn
+    {
+        width: 100%;
+    }
+
+    .bookmaker_info .btns > * + *
+    {
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Comments
+    --------------*/
+    .comments .add_comment .avatar
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+    .comments .add_comment .form
+    {
+        width: calc(100% - 60px);
+    }
+
+
+
+    .comments .comment .avatar
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+    .comments .comment .data
+    {
+        width: calc(100% - 60px);
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer
+    {
+        padding-bottom: 160px;
+    }
 
 
 
